@@ -1,0 +1,32 @@
+{
+  "name": "web-recipe",
+  "version": "1.0.0",
+  "description": "a website to find food recipes. implementation of TheMealDB web-API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrichfergian/web-recipe.git"
+  },
+  "author": "Henrich Fergian L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henrichfergian/web-recipe/issues"
+  },
+  "homepage": "https://github.com/henrichfergian/web-recipe#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.1"
+  }
+}
