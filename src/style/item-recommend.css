@@ -1,0 +1,43 @@
+.recommend {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.349);
+    border-radius: 5px;
+}
+
+.itemRecommend {
+    display: flex;
+    padding: 20px 0;
+}
+
+.itemRecommend>img {
+    max-height: 380px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    flex-basis: 50%;
+    padding: 5px;
+}
+
+.desc {
+    flex-basis: 50%;
+    padding: 5px;
+}
+
+.desc-item {
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    text-align: left;
+}
+
+td {
+    padding: 8px;
+}
+
+h3,
+h4 {
+    padding: 5px;
+}

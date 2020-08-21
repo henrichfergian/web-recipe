@@ -1,0 +1,76 @@
+.navBar {
+    display: flex;
+    background: #e01a22;
+    padding: 8px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .075);
+    position: sticky;
+    top: 0;
+}
+
+.navBar>h1,
+a {
+    flex-basis: 40%;
+    text-decoration: none;
+    color: white;
+}
+
+.navSearch {
+    display: flex;
+    flex-basis: 50%;
+    width: 100%;
+    align-content: flex-start;
+}
+
+.navSearch>input {
+    width: 60%;
+    padding: 10px;
+    border: 0;
+    font-weight: bold;
+}
+
+.navSearch>button {
+    width: 20%;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4483d5;
+    color: white;
+    border: 0;
+}
+
+.navCategory {
+    flex-basis: 10%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.navCategory>button {
+    border: none;
+    background: 0 0;
+    color: white;
+    cursor: pointer;
+    margin-top: 13px;
+}
+
+.dropdown-menu {
+    padding: 10px 5px;
+    margin: 1px 0 0;
+    position: absolute;
+    background-color: #fff;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    min-width: 160px;
+    display: none;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
