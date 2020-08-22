@@ -1,12 +1,6 @@
 import './category-item.js'
 
 class CategoriesGrid extends HTMLElement {
-    constructor() {
-        super();
-        this._shadowRoot = this.attachShadow({
-            mode: 'open'
-        })
-    }
 
     set categories(categories) {
         this._categories = categories;
@@ -14,18 +8,22 @@ class CategoriesGrid extends HTMLElement {
     }
 
     render() {
-        this._shadowRoot.innerHTML = `
+        this.innerHTML = `
             <style>
-                :host {
+                categories-grid {
                 display: flex;
                 flex-wrap: wrap;
+                }
+
+                category-item {
+                    margin: 10px;
                 }
             </style>
         `;
         this._categories.forEach(category => {
             const categoryElement = document.createElement('category-item');
             categoryElement.category = category;
-            this._shadowRoot.appendChild(categoryElement);
+            this.appendChild(categoryElement);
         });
     }
 }

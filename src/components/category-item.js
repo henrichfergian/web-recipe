@@ -14,24 +14,24 @@ class CategoryItem extends HTMLElement {
 
     set clickEvent(event) {
         this._clickEvent = event;
+        this.render();
     }
 
     get name() {
-        return this.category.strCategory;
+        return this._category.strCategory;
     }
 
     render() {
         this._shadowRoot.innerHTML = `
             <style>
-                *{
+                * {
                     padding: 0;
-                    margin: 0;
                     box-sizing: border-box;
                 }
-            
+                
                 :host {
-                flex-basis: 31.3333%;
                 margin: 10px;
+                flex-basis: 31.3333%;
                 cursor: pointer;
                 }
                 
@@ -62,7 +62,7 @@ class CategoryItem extends HTMLElement {
                 <h3>${this._category.strCategory}</h3>
             </div>
         `
-        this._shadowRoot.querySelector('.card').addEventListener('click', this._clickEvent)
+        this.addEventListener('click', this._clickEvent)
     }
 }
 

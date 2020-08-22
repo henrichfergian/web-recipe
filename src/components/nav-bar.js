@@ -9,20 +9,11 @@ class navBar extends HTMLElement {
     render() {
         this.innerHTML = `
             <style>
-                *{
-                    padding: 0;
-                    margin: 0;
-                    box-sizing: border-box;
-                }
-            
                 nav-bar {
                     box-shadow: 0 0.063em 0.313em 0 rgba(0, 0, 0, .075);
                     position: sticky;
                     top: 0;
                     width: 100%;
-                }
-                
-                .navContainer {
                     background: #e01a22;
                     display: flex;
                     padding: 0.625em
@@ -38,11 +29,9 @@ class navBar extends HTMLElement {
                 }
             </style>
 
-            <div class="navContainer">
-                <h1><a href="./index.html">Cooking Master</a></h1>
-                <nav-item></nav-item>
-                <nav-search></nav-search>
-            </div>
+            <h1><a href="./index.html">Cooking Master</a></h1>
+            <nav-item></nav-item>
+            <nav-search></nav-search>
         `;
     }
 }
