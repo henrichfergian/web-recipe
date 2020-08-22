@@ -27,7 +27,38 @@ main article {
 
 .wScreen>img {
     width: 100%;
-    height: 250px;
+    height: 16.250em;
     object-fit: cover;
     object-position: center;
 }
+
+/* .flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexItem>img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.flexItem {
+    flex-basis: 31.3333%;
+}
+
+.card {
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.137);
+    margin: 10px;
+    max-height: 400px;
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+h3,
+p {
+    padding: 10px;
+} */
