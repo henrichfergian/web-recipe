@@ -101,12 +101,12 @@ class navItem extends HTMLElement {
             <div class="dropdown-menu">
                 <span>Show by:</span>
                 <div id="categoryBtn" class="dropdown-item">Dish Category</div>
-                <div id="ingredientBtn" class="dropdown-item">Main Ingredients</div>
+                <div id="areaBtn" class="dropdown-item">Dish Origin</div>
             </div>
         `;
 
         this._shadowRoot.querySelector('#categoryBtn').addEventListener('click', this._clickMenuEvent1)
-        this._shadowRoot.querySelector('#ingredientBtn').addEventListener('click', this._clickMenuEvent2)
+        this._shadowRoot.querySelector('#areaBtn').addEventListener('click', this._clickMenuEvent2)
     }
 }
 
