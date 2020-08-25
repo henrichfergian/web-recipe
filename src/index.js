@@ -3,7 +3,6 @@ import './components/meals-grid.js'
 import './components/meal-detail.js'
 import './components/item-recommend.js'
 import './style/main.css'
-import './style/item-recommend.css'
 
 import navbarHandler from './navbar-handler.js'
 import mealHandler from './meal-handler.js'
