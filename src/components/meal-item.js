@@ -1,30 +1,67 @@
 class mealItem extends HTMLElement {
-    // constructor() {
-    //     super();
-    //     this._shadowRoot = this.attachShadow({mode: "open"})
-    // }
+    constructor() {
+        super();
+        this._shadowRoot = this.attachShadow({
+            mode: "open"
+        })
+    }
 
     set meal(meal) {
         this._meal = meal;
-        render();
+        this.render();
     }
 
     set clickEvent(event) {
         this._clickEvent = event;
+        this.render();
     }
 
-    get itemId() {
-        return this.idMeal
+    get mealId() {
+        return this._meal.idMeal;
     }
 
     render() {
-        this.innerHTML = `
-            <img src="${this._meal.strMealThumb}" alt="${this._meal.strMeal}">
-            <h2>${this._meal.strMeal}</h2>
-            <h2>Cooking Instructions</h2>
-            <p>${this._meal.strInstructions}</p>
+        this._shadowRoot.innerHTML = `
+            <style>
+                * {
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                
+                :host {
+                margin: 10px;
+                flex-basis: 31.3333%;
+                cursor: pointer;
+                }
+                
+                .card {
+                    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.137);
+                    height: 300px;
+                    text-align: center;
+                    padding: 10px;
+                    overflow: hidden;
+                    border-radius: 5px;
+                }
+
+                img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                }
+            
+                h3,
+                p {
+                padding: 10px;
+                }
+            </style>
+
+            <div class="card">
+                <img src="${this._meal.strMealThumb}" alt="${this._meal.strMeal}">
+                <h3>${this._meal.strMeal}</h3>
+            </div>
         `;
-        this.querySelector("div").addEventListener("click", this._clickEvent)
+        this.addEventListener("click", this._clickEvent)
     }
 }
 

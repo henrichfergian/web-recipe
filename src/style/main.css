@@ -31,3 +31,9 @@ main article {
     object-fit: cover;
     object-position: bottom;
 }
+
+meal-detail,
+item-recommend {
+    padding: 20px;
+    margin: 20px 5px;
+}

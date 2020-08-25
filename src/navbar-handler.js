@@ -1,5 +1,8 @@
-import categories from './categories-data'
-import area from './area-data.js'
+import './components/categories-grid.js'
+import './components/area-list.js'
+
+import categories from './data/categories-data.js'
+import area from './data/area-data.js'
 
 import categoriesHandler from './categories-handler.js'
 import areaHandler from './area-handler.js'
@@ -24,7 +27,10 @@ const navbarHandler = () => {
             <categories-grid></categories-grid>
         `;
         const categoriesMenuElement = document.querySelector('categories-grid');
+        console.log(categoriesMenuElement);
+        console.log(categories);
         categoriesMenuElement.categories = categories;
+        console.log(categoriesMenuElement);
         categoriesHandler();
     }
 
