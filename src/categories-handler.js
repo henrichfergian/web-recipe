@@ -1,3 +1,4 @@
+import './components/meals-grid.js'
 import DataFetch from "./dataFetch";
 import mealHandler from "./meal-handler";
 
@@ -7,8 +8,6 @@ const categoriesHandler = () => {
 
     const onClickCategoryItem = async (event) => {
         const target = event.target;
-        console.log(target);
-        console.log(`category item ok !, the category name is ${target.name}`);
         mainContainer.innerHTML = `
             <h2>Category: ${target.name}</h2>
             <meals-grid></meals-grid>
@@ -17,7 +16,7 @@ const categoriesHandler = () => {
         try {
             mealsGridElement.meals = await DataFetch.search('categoryItem', target.name);
         } catch (errorMsg) {
-            mainContainer.innerHTML = `${errorMsg}`
+            mainContainer.innerHTML = `Error: ${errorMsg}`;
         }
         mealHandler();
     }

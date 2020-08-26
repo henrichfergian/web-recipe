@@ -29,7 +29,7 @@ class NavBar extends HTMLElement {
                 }
             </style>
 
-            <h1><a href="./index.html">Cooking Master</a></h1>
+            <h1><a href="./index.html">Foodie</a></h1>
             <nav-item></nav-item>
             <nav-search></nav-search>
         `;

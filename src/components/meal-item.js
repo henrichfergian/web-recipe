@@ -25,18 +25,18 @@ class mealItem extends HTMLElement {
             <style>
                 * {
                     padding: 0;
+                    margin: 0;
                     box-sizing: border-box;
                 }
                 
                 :host {
-                margin: 10px;
                 flex-basis: 31.3333%;
                 cursor: pointer;
                 }
                 
                 .card {
                     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.137);
-                    height: 300px;
+                    height: 18.750em;
                     text-align: center;
                     padding: 10px;
                     overflow: hidden;
@@ -54,11 +54,18 @@ class mealItem extends HTMLElement {
                 p {
                 padding: 10px;
                 }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
             </style>
 
             <div class="card">
-                <img src="${this._meal.strMealThumb}" alt="${this._meal.strMeal}">
-                <h3>${this._meal.strMeal}</h3>
+                <a href="#${this._meal.strMeal}">
+                    <img src="${this._meal.strMealThumb}" alt="${this._meal.strMeal}">
+                    <h3>${this._meal.strMeal}</h3>
+                </a>
             </div>
         `;
         this.addEventListener("click", this._clickEvent)

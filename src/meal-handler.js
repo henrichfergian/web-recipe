@@ -1,14 +1,12 @@
-import './components/meal-item.js'
+import './components/meal-detail.js'
 import DataFetch from './dataFetch.js';
 
-const mealHandler = () => {
+const mealHandler = (item = 'meal-item') => {
     const mainContainer = document.querySelector('main')
-    const mealsItemElement = document.querySelectorAll('meal-item')
+    const mealsItemElement = document.querySelectorAll(item)
 
     const onClickMealItem = async (event) => {
         const target = event.target;
-        console.log(target);
-        console.log(`meal item ok !, the meal id is ${target.mealId}`);
         mainContainer.innerHTML = `
             <meal-detail></meal-detail>
         `
@@ -16,8 +14,9 @@ const mealHandler = () => {
         try {
             mealDetailElement.meal = await DataFetch.search('id', target.mealId)
         } catch (errorMsg) {
-            console.log(errorMsg)
+            mainContainer.innerHTML = `Error: ${errorMsg}`;
         }
+
     }
 
     mealsItemElement.forEach(mealItem => {

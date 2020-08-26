@@ -55,11 +55,18 @@ class CategoryItem extends HTMLElement {
                 p {
                 padding: 10px;
                 }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
             </style>
         
             <div class="card">
-                <img src="${this._category.strCategoryThumb}" alt="${this._category.strCategory}">
-                <h3>${this._category.strCategory}</h3>
+                <a href="#${this._category.strCategory}">
+                    <img src="${this._category.strCategoryThumb}" alt="${this._category.strCategory}">
+                    <h3>${this._category.strCategory}</h3>
+                </a>
             </div>
         `
         this.addEventListener('click', this._clickEvent)

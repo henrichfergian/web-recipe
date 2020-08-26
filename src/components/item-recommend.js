@@ -55,6 +55,7 @@ class ItemRecommend extends HTMLElement {
             
                 .itemRecommend {
                 display: flex;
+                flex-wrap: wrap;
                 }
             
                 img {
@@ -87,29 +88,35 @@ class ItemRecommend extends HTMLElement {
                 h4 {
                 padding: 8px;
                 }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
             </style>
         
-            <h2>Today's Recomendation</h2>
+            <h2>Our Recomendation</h2>
             <hr>
+            <a href="#${this._meal[0].strMeal}">
             <div class="itemRecommend">
-                <img src="${this._meal[0].strMealThumb}"
-                    alt="${this._meal[0].strMeal}">
-                <div class="desc">
-                    <h3>${this._meal[0].strMeal}</h3>
-                    <table>
-                        <tr>
-                            <td>Category: ${this._meal[0].strCategory}</td>
-                                </tr>
-                                <tr>
-                                    <td>Origin: ${this._meal[0].strArea}</td>
-                                </tr>
-                    </table>
-                    <br>
-                    <h4>Ingredients</h4>
-                    <table class="meal-ingredients"></table>
+                    <img src="${this._meal[0].strMealThumb}" alt="${this._meal[0].strMeal}">
+                    <div class="desc">
+                        <h3>${this._meal[0].strMeal}</h3>
+                        <table>
+                            <tr>
+                                <td>Category: ${this._meal[0].strCategory}</td>
+                            </tr>
+                            <tr>
+                                <td>Origin: ${this._meal[0].strArea}</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <h4>Ingredients</h4>
+                        <table class="meal-ingredients"></table>
+                    </div>
                 </div>
-            </div>
-            `;
+            </a>
+        `;
 
         const ingredientsTable = this._shadowRoot.querySelector('.meal-ingredients')
         for (let i = 0; i < mealIngredients.name.length; i++) {

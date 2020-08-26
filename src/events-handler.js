@@ -1,17 +1,18 @@
 import './components/categories-grid.js'
 import './components/area-list.js'
+import './components/meal-detail.js'
 
-import categories from './data/categories-data.js'
-import area from './data/area-data.js'
-
+import DataFetch from './dataFetch.js'
 import categoriesHandler from './categories-handler.js'
 import areaHandler from './area-handler.js'
-import DataFetch from './dataFetch.js'
+import mealHandler from './meal-handler.js'
 
-const navbarHandler = () => {
+const eventsHandler = () => {
     const navSearchElement = document.querySelector('nav-search');
     const navItemElement = document.querySelector('nav-item');
     const mainContainer = document.querySelector('main');
+    const mealRecommendElement = document.querySelector('item-recommend')
+
 
     const onSearchBtnClick = async () => {
         const keyword = navSearchElement.value
@@ -26,7 +27,7 @@ const navbarHandler = () => {
             try {
                 mealDetailElement.meal = await DataFetch.search('mealName', keyword)
             } catch (errorMsg) {
-                console.log(errorMsg)
+                mainContainer.innerHTML = `Error: ${errorMsg}`;
             }
         }
     }
@@ -37,12 +38,10 @@ const navbarHandler = () => {
             <categories-grid></categories-grid>
         `;
         const categoriesMenuElement = document.querySelector('categories-grid');
-        console.log(categoriesMenuElement);
-        console.log(categories);
         try {
             categoriesMenuElement.categories = await DataFetch.search('categoriesList');
         } catch (errorMsg) {
-            console.log(errorMsg)
+            mainContainer.innerHTML = `Error: ${errorMsg}`;
         }
         categoriesHandler();
     }
@@ -56,14 +55,24 @@ const navbarHandler = () => {
         try {
             areaMenuElement.areas = await DataFetch.search('areaList');
         } catch (errorMsg) {
-            console.log(errorMsg);
+            mainContainer.innerHTML = `Error: ${errorMsg}`;
         }
         areaHandler();
+    }
+
+    const mealRec = async () => {
+        try {
+            mealRecommendElement.meal = await DataFetch.random();
+        } catch (errorMsg) {
+            mainContainer.innerHTML = `Error: ${errorMsg}`;
+        }
+        mealHandler('item-recommend')
     }
 
     navSearchElement.clickEvent = onSearchBtnClick;
     navItemElement.clickMenuEvent1 = onMenuCategoryBtnClick;
     navItemElement.clickMenuEvent2 = onMenuAreaBtnClick;
+    mealRec();
 }
 
-export default navbarHandler
+export default eventsHandler

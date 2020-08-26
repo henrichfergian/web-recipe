@@ -63,47 +63,51 @@ class NavItem extends HTMLElement {
                 }
             
                 :host {
-                flex-basis: 10%;
+                    flex-basis: 10%;
                 }
                 
                 #menuBtn {
-                text-align: center;
-                color: white;
-                padding: 0.625em;
-                cursor: pointer;
-                font-size: 1.1em;
+                    text-align: center;
+                    color: white;
+                    padding: 0.625em;
+                    cursor: pointer;
+                    font-size: 1.1em;
                 }
             
                 .dropdown-menu {
-                position: absolute;
-                padding: 0.625em 0.313em;
-                margin: 0.625em 0 0;
-                background-color: #fff;
-                border: 0.125em solid lightgray;
-                border-radius: 0.313em;
-                min-width: 11em;
-                display: none;
+                    position: absolute;
+                    padding: 0.625em 0.313em;
+                    margin: 0.625em 0 0;
+                    background-color: #fff;
+                    border: 0.125em solid lightgray;
+                    border-radius: 0.313em;
+                    min-width: 11em;
+                    display: none;
                 }
             
                 .dropdown-item {
-                display: block;
-                width: 100%;
-                padding: 0.313em 0.625em;
-                cursor: pointer;
+                    display: block;
+                    text-decoration: none;
+                    color: black;
+                    width: 100%;
+                    padding: 0.313em 0.625em;
+                    cursor: pointer;
                 }
             
                 .dropdown-menu.show {
-                display: block;
+                    display: block;
                 }
             </style>
 
             <div id="menuBtn">Menu</div>
             <div class="dropdown-menu">
                 <span>Show by:</span>
-                <div id="categoryBtn" class="dropdown-item">Dish Category</div>
-                <div id="areaBtn" class="dropdown-item">Dish Origin</div>
+                <a href="#category" id="categoryBtn" class="dropdown-item">Dish Category</a>
+                <a href="#area" id="areaBtn" class="dropdown-item">Dish Origin</a>
             </div>
-        `;
+            `;
+        // <div id="categoryBtn" class="dropdown-item">Dish Category</div>
+        // <div id="areaBtn" class="dropdown-item">Dish Origin</div>
 
         this._shadowRoot.querySelector('#categoryBtn').addEventListener('click', this._clickMenuEvent1)
         this._shadowRoot.querySelector('#areaBtn').addEventListener('click', this._clickMenuEvent2)

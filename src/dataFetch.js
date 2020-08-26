@@ -1,6 +1,5 @@
 class DataFetch {
     static search(options = 'id', keyword) {
-        console.log(options + ', ' + keyword)
         return new Promise(async (resolve, reject) => {
             const baseURL = 'https://www.themealdb.com/api/json/v1/1';
             let response = null;
