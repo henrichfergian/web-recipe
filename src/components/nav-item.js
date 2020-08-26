@@ -1,4 +1,4 @@
-class navItem extends HTMLElement {
+class NavItem extends HTMLElement {
     constructor() {
         super();
         this._shadowRoot = this.attachShadow({
@@ -110,4 +110,4 @@ class navItem extends HTMLElement {
     }
 }
 
-customElements.define("nav-item", navItem);
+customElements.define("nav-item", NavItem);

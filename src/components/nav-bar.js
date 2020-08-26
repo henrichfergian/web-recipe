@@ -1,7 +1,7 @@
 import './nav-search.js'
 import './nav-item.js'
 
-class navBar extends HTMLElement {
+class NavBar extends HTMLElement {
     connectedCallback() {
         this.render();
     }
@@ -36,4 +36,4 @@ class navBar extends HTMLElement {
     }
 }
 
-customElements.define("nav-bar", navBar)
+customElements.define("nav-bar", NavBar)

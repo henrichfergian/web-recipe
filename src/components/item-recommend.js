@@ -90,12 +90,12 @@ class ItemRecommend extends HTMLElement {
             </style>
         
             <h2>Today's Recomendation</h2>
+            <hr>
             <div class="itemRecommend">
-                <img src="https://www.themealdb.com/images/media/meals/1d85821576790598.jpg"
-                    alt="Classic Christmas pudding">
+                <img src="${this._meal[0].strMealThumb}"
+                    alt="${this._meal[0].strMeal}">
                 <div class="desc">
-                    <h3>Classic Christmas pudding</h3>
-                    <hr>
+                    <h3>${this._meal[0].strMeal}</h3>
                     <table>
                         <tr>
                             <td>Category: ${this._meal[0].strCategory}</td>

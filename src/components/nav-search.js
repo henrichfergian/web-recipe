@@ -1,4 +1,4 @@
-class navSearch extends HTMLElement {
+class NavSearch extends HTMLElement {
     constructor() {
         super();
         this._shadowRoot = this.attachShadow({
@@ -55,4 +55,4 @@ class navSearch extends HTMLElement {
     }
 }
 
-customElements.define("nav-search", navSearch)
+customElements.define("nav-search", NavSearch)

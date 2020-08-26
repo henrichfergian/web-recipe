@@ -8,6 +8,7 @@ import navbarHandler from './navbar-handler.js'
 import mealHandler from './meal-handler.js'
 import meals from './data/mealList-data.js'
 import mealDetail from './data/mealDetail-data.js'
+import DataFetch from './dataFetch.js'
 
 document.addEventListener("DOMContentLoaded", navbarHandler);
 
@@ -18,4 +19,13 @@ const mealRecommend = document.querySelector('item-recommend')
 // mealDetailElement.meal = mealDetail;
 // mealsElement.meals = meals;
 
-mealRecommend.meal = mealDetail
+const mealInfo = async () => {
+    try {
+        console.log(await DataFetch.random());
+        mealRecommend.meal = await DataFetch.random();
+    } catch (errorMsg) {
+        alert(`something is error ${errorMsg}`)
+    }
+}
+
+mealInfo();
