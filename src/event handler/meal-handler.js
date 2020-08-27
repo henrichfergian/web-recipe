@@ -1,4 +1,4 @@
-import './components/meal-detail.js'
+import '../components/meal-detail.js'
 import DataFetch from './dataFetch.js';
 
 const mealHandler = (item = 'meal-item') => {

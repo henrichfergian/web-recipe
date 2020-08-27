@@ -1,6 +1,6 @@
-import './components/categories-grid.js'
-import './components/area-list.js'
-import './components/meal-detail.js'
+import '../components/categories-grid.js'
+import '../components/area-list.js'
+import '../components/meal-detail.js'
 
 import DataFetch from './dataFetch.js'
 import categoriesHandler from './categories-handler.js'
@@ -19,16 +19,16 @@ const eventsHandler = () => {
         if ((keyword === null) || (keyword === '')) {
             alert("Search field is blank !")
         } else {
-            console.log(`btn search ok !, the keyword is ${keyword}`);
             mainContainer.innerHTML = `
-                <meal-detail></meal-detail>
+                <meals-grid></meals-grid>
             `
-            const mealDetailElement = document.querySelector('meal-detail')
+            const mealGridElement = document.querySelector('meals-grid')
             try {
-                mealDetailElement.meal = await DataFetch.search('mealName', keyword)
+                mealGridElement.meals = await DataFetch.search('mealName', keyword)
             } catch (errorMsg) {
                 mainContainer.innerHTML = `Error: ${errorMsg}`;
             }
+            mealHandler();
         }
     }
 

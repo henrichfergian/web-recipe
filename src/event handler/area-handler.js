@@ -1,5 +1,5 @@
-import DataFetch from "./dataFetch";
-import mealHandler from "./meal-handler";
+import DataFetch from "./dataFetch.js";
+import mealHandler from "./meal-handler.js";
 
 const areaHandler = () => {
     const areaListElement = document.querySelector('area-list');

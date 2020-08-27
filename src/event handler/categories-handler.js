@@ -1,6 +1,6 @@
-import './components/meals-grid.js'
-import DataFetch from "./dataFetch";
-import mealHandler from "./meal-handler";
+import '../components/meals-grid.js'
+import DataFetch from "./dataFetch.js";
+import mealHandler from "./meal-handler.js";
 
 const categoriesHandler = () => {
     const categoriesElement = document.querySelectorAll('category-item')
