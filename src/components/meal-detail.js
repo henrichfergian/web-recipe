@@ -53,8 +53,8 @@ class MealDetail extends HTMLElement {
                 border-radius: 5px;
                 }
             
-                h1,
-                h2 {
+                h2,
+                h3 {
                 padding: 10px;
                 }
             
@@ -74,13 +74,31 @@ class MealDetail extends HTMLElement {
                 td {
                 padding: 8px;
                 }
+
+                @media screen and (max-width:450px) {
+                    table {
+                        width: 90%;
+                    }
+
+                    td {
+                        padding: 2px;
+                    }
+
+                    p {
+                        padding: 5px 20px;
+                    }
+
+                    img {
+                        height: 300px;
+                    }
+                }
             </style>
 
-            <h1>${this._meal['0'].strMeal}</h1>
+            <h2>${this._meal['0'].strMeal}</h2>
             <hr>
             <img src="${this._meal['0'].strMealThumb}"
                 alt="${this._meal['0'].strMeal}">
-                <h2>Ingredients</h2>
+                <h3>Ingredients</h3>
                 <table></table>
         `;
 
@@ -95,7 +113,8 @@ class MealDetail extends HTMLElement {
         }
 
         this._shadowRoot.innerHTML += `
-            <h2>Cooking Instruction</h2>
+            <br>
+            <h3>Cooking Instruction</h3>
             <p>${this._meal[0].strInstructions}</p>
         `
     }

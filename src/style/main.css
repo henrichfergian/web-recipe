@@ -35,5 +35,26 @@ main article {
 meal-detail,
 item-recommend {
     padding: 20px;
-    margin: 20px 5px;
+}
+
+@media screen and (max-width:450px) {
+    .wScreen>img {
+        height: 100px;
+    }
+
+    main {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    h2 {
+        padding-left: 10px;
+    }
+
+    meal-detail,
+    item-recommend {
+        padding: 5px;
+        margin: 0;
+    }
+
 }

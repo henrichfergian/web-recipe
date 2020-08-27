@@ -41,6 +41,12 @@ class AreaList extends HTMLElement {
                 li:nth-child(even) {
                     background-color: lightblue;
                 }
+
+                @media screen and (max-width:450px) {
+                    ol {
+                        padding: 0 40px;
+                    }
+                }
             </style>
             
             <ol></ol>

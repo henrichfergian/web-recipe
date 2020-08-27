@@ -59,6 +59,28 @@ class mealItem extends HTMLElement {
                     text-decoration: none;
                     color: black;
                 }
+
+                @media screen and (max-width:450px) {
+                    :host {
+                        flex-basis: 30.33333%;
+                        cursor: pointer;
+                    }
+                    
+                    .card {
+                        padding: 2px;
+                        height: 132px;
+                    }
+
+                    h3 {
+                        padding: 5px;
+                        font-size: 0.9em;
+                    }
+                
+                    img {
+                        height: 70px;
+                        width : 103px;
+                    }
+                }
             </style>
 
             <div class="card">

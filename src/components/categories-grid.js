@@ -18,6 +18,12 @@ class CategoriesGrid extends HTMLElement {
                 category-item {
                     margin: 10px;
                 }
+
+                @media screen and (max-width:450px) {
+                    category-item {
+                        margin: 5px;
+                    }
+                }
             </style>
         `;
         this._categories.forEach(category => {

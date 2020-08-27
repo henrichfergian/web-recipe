@@ -22,6 +22,12 @@ class mealsGrid extends HTMLElement {
                 meal-item {
                     margin: 10px;
                 }
+
+                @media screen and (max-width:450px) {
+                    meal-item {
+                        margin: 5px;
+                    }
+                }
             </style>
         `;
         this._meals.forEach(meal => {

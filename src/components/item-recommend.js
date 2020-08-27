@@ -80,7 +80,7 @@ class ItemRecommend extends HTMLElement {
                 }
 
                 h2 {
-                    padding: 15px
+                    padding: 10px
                 }
             
                 td,
@@ -92,6 +92,15 @@ class ItemRecommend extends HTMLElement {
                 a {
                     text-decoration: none;
                     color: black;
+                }
+                @media screen and (max-width:450px) {
+                    img, .desc {
+                        flex-basis: 100%;
+                    }
+
+                    img {
+                        max-height: 300px;
+                    }
                 }
             </style>
         

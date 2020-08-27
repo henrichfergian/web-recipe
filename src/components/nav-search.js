@@ -46,6 +46,12 @@ class NavSearch extends HTMLElement {
                     border: 0;
                     font-size: 1.1em;
                 }
+                @media screen and (max-width:450px) {
+                    button {
+                        flex-basis: 40%;
+                        margin: 0;
+                    }
+                }
             </style>
 
             <input type="search" placeholder="Search dish name" id="navSearchInput">

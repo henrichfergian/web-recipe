@@ -27,10 +27,10 @@ class CategoryItem extends HTMLElement {
                 * {
                     padding: 0;
                     box-sizing: border-box;
+                    margin: 0px;
                 }
                 
                 :host {
-                margin: 10px;
                 flex-basis: 31.3333%;
                 cursor: pointer;
                 }
@@ -45,20 +45,41 @@ class CategoryItem extends HTMLElement {
                 }
 
                 img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                object-position: center;
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    object-position: center;
                 }
             
-                h3,
-                p {
-                padding: 10px;
+                h3 {
+                    padding: 10px;
                 }
 
                 a {
                     text-decoration: none;
                     color: black;
+                }
+
+                @media screen and (max-width:450px) {
+                    :host {
+                        flex-basis: 30.33333%;
+                        cursor: pointer;
+                    }
+                    
+                    .card {
+                        padding: 2px;
+                        height: 125px;
+                    }
+
+                    h3 {
+                        padding: 5px;
+                        font-size: 0.9em;
+                    }
+                
+                    img {
+                        height: 70px;
+                        width : 103px;
+                    }
                 }
             </style>
         
