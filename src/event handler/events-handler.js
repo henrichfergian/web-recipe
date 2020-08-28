@@ -20,6 +20,7 @@ const eventsHandler = () => {
             alert("Search field is blank !")
         } else {
             mainContainer.innerHTML = `
+                <h2>Result for ${keyword}:</h2>
                 <meals-grid></meals-grid>
             `
             const mealGridElement = document.querySelector('meals-grid')
